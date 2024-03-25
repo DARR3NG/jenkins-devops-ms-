@@ -14,7 +14,7 @@
 //DECLARATIVE
 pipeline{
 	agent{
-		label "node"
+		label any
 	}
 
 	stages{
