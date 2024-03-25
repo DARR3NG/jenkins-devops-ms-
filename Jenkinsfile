@@ -14,7 +14,7 @@
 //DECLARATIVE
 pipeline{
 	//agent any
-	agent {docker {   image 'maven:3.9.3-eclipse-temurin-17'} }
+	agent {docker {   image 'maven:3.6.3'} }
 
 	stages{
 		stage("Build"){
