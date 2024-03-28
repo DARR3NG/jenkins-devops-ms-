@@ -11,10 +11,14 @@
 	
 }*/
 
+
 //DECLARATIVE
 pipeline{
 	//agent any
-	agent {docker {   image 'maven:3.6.3'} }
+	agent {docker {   image 'maven:3.6.3'
+					  args '-v /var/run/docker.sock:/var/run/docker.sock --dns 127.0.0.53'
+					  
+					  } }
 
 	stages{
 		stage("Build"){
